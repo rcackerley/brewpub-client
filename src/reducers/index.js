@@ -71,7 +71,216 @@ const initialState = {
     },
   ],
   user: null,
-  books: [],
+  books: [
+    {
+      title: 'Game of Thrones',
+      author: 'George R.R. Martin',
+      reviews: '422',
+      stars: 5,
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.consectetur adipiscing elit, sed do eiusmod tempor.',
+      img: 'images/got-cover.jpg',
+      pairings: [
+        {
+          brewery: 'Harpoon',
+          img: 'images/harpoon.png',
+          name: 'UFO',
+          type: 'Pale Ale'
+        },
+        {
+          brewery: 'Harpoon',
+          img: 'images/harpoon.png',
+          name: 'UFO',
+          type: 'Pale Ale'
+        },
+        {
+          brewery: 'Harpoon',
+          img: 'images/harpoon.png',
+          name: 'UFO',
+          type: 'Pale Ale'
+        },
+        {
+          brewery: 'Harpoon',
+          img: 'images/harpoon.png',
+          name: 'UFO',
+          type: 'Pale Ale'
+        },
+        {
+          brewery: 'Harpoon',
+          img: 'images/harpoon.png',
+          name: 'UFO',
+          type: 'Pale Ale'
+        },
+        {
+          brewery: 'Harpoon',
+          img: 'images/harpoon.png',
+          name: 'UFO',
+          type: 'Pale Ale'
+        },
+        {
+          brewery: 'Harpoon',
+          img: 'images/harpoon.png',
+          name: 'UFO',
+          type: 'Pale Ale'
+        }
+      ]
+    },
+    {
+      title: 'The Kite Runner',
+      author: 'Khaled Hosseini',
+      reviews: '765',
+      stars: 3,
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.consectetur adipiscing elit, sed do eiusmod tempor.',
+      img: 'images/the-kite-runner.jpg',
+      pairings: [
+        {
+          brewery: 'Harpoon',
+          img: 'images/harpoon.png',
+          name: 'UFO',
+          type: 'Pale Ale'
+        },
+        {
+          brewery: 'Harpoon',
+          img: 'images/harpoon.png',
+          name: 'UFO',
+          type: 'Pale Ale'
+        },
+        {
+          brewery: 'Harpoon',
+          img: 'images/harpoon.png',
+          name: 'UFO',
+          type: 'Pale Ale'
+        },
+        {
+          brewery: 'Harpoon',
+          img: 'images/harpoon.png',
+          name: 'UFO',
+          type: 'Pale Ale'
+        },
+        {
+          brewery: 'Harpoon',
+          img: 'images/harpoon.png',
+          name: 'UFO',
+          type: 'Pale Ale'
+        },
+        {
+          brewery: 'Harpoon',
+          img: 'images/harpoon.png',
+          name: 'UFO',
+          type: 'Pale Ale'
+        },
+        {
+          brewery: 'Harpoon',
+          img: 'images/harpoon.png',
+          name: 'UFO',
+          type: 'Pale Ale'
+        }
+      ]
+    },
+    {
+      title: 'First Women',
+      author: 'Kate Anderson Bower',
+      reviews: '138',
+      stars: 5,
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.consectetur adipiscing elit, sed do eiusmod tempor.',
+      img: 'images/first-women-cover.jpg',
+      pairings: [
+        {
+          brewery: 'Harpoon',
+          img: 'images/harpoon.png',
+          name: 'UFO',
+          type: 'Pale Ale'
+        },
+        {
+          brewery: 'Harpoon',
+          img: 'images/harpoon.png',
+          name: 'UFO',
+          type: 'Pale Ale'
+        },
+        {
+          brewery: 'Harpoon',
+          img: 'images/harpoon.png',
+          name: 'UFO',
+          type: 'Pale Ale'
+        },
+        {
+          brewery: 'Harpoon',
+          img: 'images/harpoon.png',
+          name: 'UFO',
+          type: 'Pale Ale'
+        },
+        {
+          brewery: 'Harpoon',
+          img: 'images/harpoon.png',
+          name: 'UFO',
+          type: 'Pale Ale'
+        },
+        {
+          brewery: 'Harpoon',
+          img: 'images/harpoon.png',
+          name: 'UFO',
+          type: 'Pale Ale'
+        },
+        {
+          brewery: 'Harpoon',
+          img: 'images/harpoon.png',
+          name: 'UFO',
+          type: 'Pale Ale'
+        }
+      ]
+    },
+    {
+      title: 'Grant',
+      author: 'Ron Chernow',
+      reviews: '46',
+      stars: 4,
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.consectetur adipiscing elit, sed do eiusmod tempor.',
+      img: 'images/grant-cover.jpg',
+      pairings: [
+        {
+          brewery: 'Harpoon',
+          img: 'images/harpoon.png',
+          name: 'UFO',
+          type: 'Pale Ale'
+        },
+        {
+          brewery: 'Harpoon',
+          img: 'images/harpoon.png',
+          name: 'UFO',
+          type: 'Pale Ale'
+        },
+        {
+          brewery: 'Harpoon',
+          img: 'images/harpoon.png',
+          name: 'UFO',
+          type: 'Pale Ale'
+        },
+        {
+          brewery: 'Harpoon',
+          img: 'images/harpoon.png',
+          name: 'UFO',
+          type: 'Pale Ale'
+        },
+        {
+          brewery: 'Harpoon',
+          img: 'images/harpoon.png',
+          name: 'UFO',
+          type: 'Pale Ale'
+        },
+        {
+          brewery: 'Harpoon',
+          img: 'images/harpoon.png',
+          name: 'UFO',
+          type: 'Pale Ale'
+        },
+        {
+          brewery: 'Harpoon',
+          img: 'images/harpoon.png',
+          name: 'UFO',
+          type: 'Pale Ale'
+        }
+      ]
+    }
+  ],
   token: null
 }
 
