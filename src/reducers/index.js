@@ -1,4 +1,4 @@
-import {setBeersOfTheWeek, setSpiritsOfTheWeek, setToken} from '../actions/index';
+import {setBeersOfTheWeek, setSpiritsOfTheWeek, setToken, setUserImage, setUser} from '../actions/index';
 
 const initialState = {
   featuredHeros: [
@@ -32,7 +32,9 @@ const initialState = {
   ],
   featuredBeers: [],
   featuredSpirits: [],
-  user: null,
+  user: {
+    image: 'images/placeholder.png'
+  },
   books: [
     {
       title: 'Game of Thrones',
@@ -256,6 +258,12 @@ const reducerRoutes = {
   [setToken]: (state, action) => ({
    ...state, token: action.payload
  }),
+ [setUserImage]: (state, action) => ({
+  ...state, user: {...state.user, image: action.payload}
+  }),
+  [setUser]: (state, action) => ({
+    ...state, user: action.payload
+  }),
   default: (state, action) => state
 }
 

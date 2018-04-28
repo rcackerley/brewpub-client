@@ -1,14 +1,34 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import {setUser} from '../../actions/index';
+import {getUserProfile} from '../../ajax/index';
 
-let UserProfile = ({user}) =>
-  <div className="vertical-flex">
-    <img className="menu-prof-image" src="images/robby.jpg"/>
-    <h3>robby ackerley</h3>
-    <p>username: rcackerley<br />
-       email: rcackerley@me.com<br />
-       password: ***********
-    </p>
+class UserProfile extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+  componentDidMount() {
+    let {token, setUser} = this.props;
+    getUserProfile(token)
+    .then(user => {user.image === null ? user.image = "images/placeholder.png" : console.log('image found'); return user;})
+    .then(user => setUser(user))
+  }
 
-  </div>
+  render() {
+    let {user} = this.props;
+    return (
+      <div className="vertical-flex">
+        <img className="menu-prof-image" src={user.image}/>
+        <h3>{user.name}</h3>
+        <p>email: {user.email}<br />
+           password: ***********
+        </p>
 
-export default UserProfile;
+      </div>
+    )
+  }
+}
+let mapDispatchToProps = dispatch => ({setUser: (user) => dispatch(setUser(user)) });
+let mapStateToProps = state => ({user: state.user, token: state.token})
+let UserProfileContainer = connect(mapStateToProps, mapDispatchToProps)(UserProfile);
+export default UserProfileContainer;

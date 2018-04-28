@@ -4,19 +4,33 @@ export const setBeersOfTheWeek = beers =>
     payload: beers
   });
 
-  export const setSpiritsOfTheWeek = spirits =>
-    ({
-      type: setSpiritsOfTheWeek.toString(),
-      payload: spirits
-    })
+export const setSpiritsOfTheWeek = spirits =>
+  ({
+    type: setSpiritsOfTheWeek.toString(),
+    payload: spirits
+  })
 
-  export const setToken = token =>
-    ({
-      type: setToken.toString(),
-      payload: token
-    })
+export const setToken = token =>
+  ({
+    type: setToken.toString(),
+    payload: token
+  })
+
+export const setUserImage = image =>
+  ({
+    type: setUserImage.toString(),
+    payload: image
+  })
+
+export const setUser = user =>
+  ({
+    type: setUser.toString(),
+    payload: user
+  })
 
 
-  setBeersOfTheWeek.toString = () => 'SET_BEERS_OF_THE_WEEK';
-  setSpiritsOfTheWeek.toString = () => 'SET_SPIRITS_OF_THE_WEEK';
-  setToken.toString = () => 'SET_TOKEN';
+setBeersOfTheWeek.toString = () => 'SET_BEERS_OF_THE_WEEK';
+setSpiritsOfTheWeek.toString = () => 'SET_SPIRITS_OF_THE_WEEK';
+setToken.toString = () => 'SET_TOKEN';
+setUserImage.toString = () => 'SET_USER_IMAGE';
+setUser.toString = () => 'SET_USER';

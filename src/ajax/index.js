@@ -20,7 +20,7 @@ export let createAccount = (user) =>
       'content-type': 'application/json'
     }
   })
-  .then(res => res.text())
+  .then(res => res.json())
 
 export let signIn = (user) =>
   fetch('/signin', {
@@ -30,4 +30,24 @@ export let signIn = (user) =>
       'content-type': 'application/json'
     }
   })
-  .then(res => res.text())
+  .then(res => res.json())
+
+export let getProfileThumbnailImage = (token) =>
+  fetch('/profile', {
+    body: JSON.stringify(token),
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json'
+    }
+  })
+  .then(res => res.json())
+
+export let getUserProfile = (token) =>
+  fetch('/my-profile', {
+    body: JSON.stringify(token),
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json'
+    }
+  })
+  .then(res => res.json())
