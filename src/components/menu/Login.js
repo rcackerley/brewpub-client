@@ -6,20 +6,22 @@ class Login extends React.Component {
     super(props);
 
     this.state = {
-      usernameInput: null,
+      emailInput: null,
       passwordInput: null,
     }
   }
 
   render() {
+    let {emailInput, passwordInput} = this.state;
     let handleUserName = (event) =>
-      this.setState({usernameInput: event.target.value})
+      this.setState({emailInput: event.target.value})
     let handlePassword = (event) =>
       this.setState({passwordInput: event.target.value})
 
     return (
       <div className="form">
-        <LoginForm handleUserName={handleUserName} handlePassword={handlePassword} />
+        <LoginForm handleUserName={handleUserName} handlePassword={handlePassword}
+        emailInput={emailInput} passwordInput={passwordInput} />
       </div>
     )
   }

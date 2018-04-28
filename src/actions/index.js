@@ -10,4 +10,13 @@ export const setBeersOfTheWeek = beers =>
       payload: spirits
     })
 
+  export const setToken = token =>
+    ({
+      type: setToken.toString(),
+      payload: token
+    })
+
+
   setBeersOfTheWeek.toString = () => 'SET_BEERS_OF_THE_WEEK';
+  setSpiritsOfTheWeek.toString = () => 'SET_SPIRITS_OF_THE_WEEK';
+  setToken.toString = () => 'SET_TOKEN';

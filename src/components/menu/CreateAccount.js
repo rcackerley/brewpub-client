@@ -13,6 +13,7 @@ class CreateAccount extends React.Component {
   }
 
   render() {
+    let {usernameInput, passwordInput, emailInput} = this.state;
     let handleUserName = (event) =>
       this.setState({usernameInput: event.target.value})
     let handlePassword = (event) =>
@@ -23,7 +24,8 @@ class CreateAccount extends React.Component {
     return (
       <div className="menu-page">
         <div className="form">
-          <CreateAccountForm handleUserName={handleUserName} handlePassword={handlePassword} handleEmail={handleEmail} />
+          <CreateAccountForm handleUserName={handleUserName} handlePassword={handlePassword} handleEmail={handleEmail}
+          usernameInput={usernameInput} passwordInput={passwordInput} emailInput={emailInput} />
         </div>
       </div>
     )
