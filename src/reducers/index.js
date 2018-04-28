@@ -1,4 +1,4 @@
-import {setBeersOfTheWeek} from '../actions/index';
+import {setBeersOfTheWeek, setSpiritsOfTheWeek} from '../actions/index';
 
 const initialState = {
   featuredHeros: [
@@ -34,17 +34,17 @@ const initialState = {
   featuredSpirits: [
     {
       distillary: 'Widow Jane',
-      icon: 'images/widow-jane.png',
+      icon: 'images/spirits/widow-jane.png',
       name: 'Bourbon'
     },
     {
       distillary: 'Cruzan',
-      icon: 'images/cruzan.png',
+      icon: 'images/spirits/cruzan.png',
       name: 'Aged Rum'
     },
     {
       distillary: 'Silver',
-      icon: 'images/patron.png',
+      icon: 'images/spirits/patron.png',
       name: 'Patrón'
     },
   ],
@@ -265,6 +265,9 @@ const initialState = {
 const reducerRoutes = {
   [setBeersOfTheWeek]: (state, action) => ({
     ...state, featuredBeers: action.payload
+  }),
+  [setSpiritsOfTheWeek]: (state, action) => ({
+    ...state, featuredSpirits: action.payload
   }),
   default: (state, action) => state
 }
