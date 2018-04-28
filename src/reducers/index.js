@@ -1,4 +1,4 @@
-
+import {setBeersOfTheWeek} from '../actions/index';
 
 const initialState = {
   featuredHeros: [
@@ -30,29 +30,7 @@ const initialState = {
       class: 'wind'
     }
   ],
-  featuredBeers: [
-    {
-      brewery: 'Harpoon',
-      name: 'UFO',
-      icon: 'images/harpoon.png'
-    },
-    {
-      brewery: 'Samuel Adams',
-      name: 'Boston Lager',
-      icon: 'images/harpoon.png'
-    },
-    {
-      brewery: 'Sweetwater',
-      name: '420',
-      icon: 'images/harpoon.png'
-    },
-    {
-      brewery: 'Left Hand Brewing',
-      name: 'Milk Stout Nitro',
-      icon: 'images/harpoon.png'
-    },
-
-  ],
+  featuredBeers: [],
   featuredSpirits: [
     {
       distillary: 'Widow Jane',
@@ -285,6 +263,9 @@ const initialState = {
 }
 
 const reducerRoutes = {
+  [setBeersOfTheWeek]: (state, action) => ({
+    ...state, featuredBeers: action.payload
+  }),
   default: (state, action) => state
 }
 
