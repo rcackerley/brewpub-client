@@ -1,4 +1,4 @@
-import {setBeersOfTheWeek, setSpiritsOfTheWeek, setToken, setUserImage, setUser} from '../actions/index';
+import {setBeersOfTheWeek, setSpiritsOfTheWeek, setToken, setUserImage, setUser, setHeros} from '../actions/index';
 
 const initialState = {
   featuredHeros: [
@@ -263,6 +263,9 @@ const reducerRoutes = {
   }),
   [setUser]: (state, action) => ({
     ...state, user: action.payload
+  }),
+  [setHeros]: (state, action) => ({
+    ...state, featuredHeros: action.payload
   }),
   default: (state, action) => state
 }

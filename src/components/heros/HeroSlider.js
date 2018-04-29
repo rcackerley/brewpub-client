@@ -2,9 +2,15 @@ import React from 'react';
 import Slider from 'react-slick';
 import {connect} from 'react-redux';
 import HeroCard from './HeroCard';
+import {getHeroCards} from '../../ajax/index';
+import {setHeros} from '../../actions/index';
 
 class HeroSlider extends React.Component {
-
+  componentDidMount() {
+    let {setHeros} = this.props
+    getHeroCards()
+    .then(cards => setHeros(cards))
+  }
   render() {
     let {cards} = this.props;
     let settings = {
@@ -47,6 +53,7 @@ class HeroSlider extends React.Component {
     )
   }
 }
+let mapDispatchToProps = dispatch => ({setHeros: (cards) => dispatch(setHeros(cards))});
 let mapStateToProps = (state) => ({cards: state.featuredHeros})
-let HeroSliderContainer = connect(mapStateToProps)(HeroSlider);
+let HeroSliderContainer = connect(mapStateToProps, mapDispatchToProps)(HeroSlider);
 export default HeroSliderContainer;
