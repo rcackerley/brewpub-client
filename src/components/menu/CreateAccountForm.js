@@ -13,6 +13,7 @@ let CreateAccountForm = ({handleEmail, handlePassword, handleUserName, emailInpu
       (event) => {
         event.preventDefault();
         createAccount({name: usernameInput, email: emailInput, password: passwordInput})
+        .then(token => {localStorage.setItem('token', JSON.stringify(token)); return token})
         .then(token => setToken(token))
         .then(res => history.push('/'))
       }

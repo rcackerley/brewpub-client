@@ -11,6 +11,7 @@ let LoginForm = ({handlePassword, handleUserName, emailInput, passwordInput, set
     <button onClick={(event) => {
       event.preventDefault();
       signIn({email: emailInput, password: passwordInput})
+      .then(token => {localStorage.setItem('token', JSON.stringify(token)); return token})
       .then(token => setToken(token))
       .then(res => history.push('/'))
     }
