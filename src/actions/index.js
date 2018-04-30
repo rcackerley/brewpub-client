@@ -34,9 +34,16 @@ export const setHeros = cards =>
     payload: cards
   })
 
+export const setBooks = pairings =>
+  ({
+    type: setBooks.toString(),
+    payload: pairings
+  })
+
 setBeersOfTheWeek.toString = () => 'SET_BEERS_OF_THE_WEEK';
 setSpiritsOfTheWeek.toString = () => 'SET_SPIRITS_OF_THE_WEEK';
 setToken.toString = () => 'SET_TOKEN';
 setUserImage.toString = () => 'SET_USER_IMAGE';
 setUser.toString = () => 'SET_USER';
 setHeros.toString = () => 'SET_HEROS';
+setBooks.toString = () => 'SET_BOOKS';

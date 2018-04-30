@@ -1,15 +1,17 @@
 import React from 'react';
 import BookCard from './BookCard';
 import {connect} from 'react-redux';
-import {getHeroPairings} from '../../ajax/index';
+import {getPairingCards} from '../../ajax/index';
+import {setBooks} from '../../actions/index'
 
 class Cards extends React.Component {
   constructor(props) {
     super(props)
   }
   componentDidMount() {
-    getHeroPairings()
-    .then(pairings => console.log(pairings))
+    let {setBooks} = this.props;
+    getPairingCards()
+    // .then(pairings => setBooks(pairings))
   }
   render() {
     let {books} = this.props;
@@ -21,6 +23,7 @@ class Cards extends React.Component {
     )
   }
 }
+let mapDispatchToProps = dispatch => ({setBooks: (books) => dispatch(setBooks(books))})
 let mapStateToProps = state => ({books: state.books})
-let CardsContainer = connect(mapStateToProps)(Cards);
+let CardsContainer = connect(mapStateToProps, mapDispatchToProps)(Cards);
 export default CardsContainer;

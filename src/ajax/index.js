@@ -55,3 +55,7 @@ export let getUserProfile = (token) =>
 export let getHeroCards = () =>
   fetch('/heros')
   .then(res => res.json())
+
+export let getPairingCards = () =>
+  fetch('/pairings')
+  .then(res => res.json())

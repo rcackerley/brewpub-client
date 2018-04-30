@@ -7,11 +7,11 @@ import BookPairings from './BookPairings';
 let BookCard = ({book}) =>
   <div className="book-card">
     <div className="book-info">
-      <BookCover img={book.img} />
+      <BookCover img={book.image} />
       <div className="book-content">
         <BookTitleAuthor title={book.title} author={book.author}/>
         <BottleRatings reviews={book.reviews} stars={book.stars} orange={'orange'}/>
-        <p className="summary">{book.desc}</p>
+        <p className="summary">{book.description}</p>
       </div>
     </div>
     <BookPairings pairings={book.pairings} />

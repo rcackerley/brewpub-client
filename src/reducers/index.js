@@ -1,35 +1,7 @@
-import {setBeersOfTheWeek, setSpiritsOfTheWeek, setToken, setUserImage, setUser, setHeros} from '../actions/index';
+import {setBeersOfTheWeek, setSpiritsOfTheWeek, setToken, setUserImage, setUser, setHeros, setBooks} from '../actions/index';
 
 const initialState = {
-  featuredHeros: [
-    {
-      title: 'The Botany of Desire',
-      author: 'Michael Pollan',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse augue tellus, semper sed nisi quis, sollicitudin faucibus ante. Nam dignissim volutpat ipsum in semper. Sed quis felis quis dolor venenatis ultricies. Donec placerat augue quis justo efficitur sollicitudin. Maecenas luctus nibh auctor mauris ultrices maximus.',
-      reviews: '1000',
-      stars: 2,
-      img: "images/botany.jpg",
-      class: 'botany'
-    },
-    {
-      title: 'Into Thin Air',
-      author: 'Jon Krakauer',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse augue tellus, semper sed nisi quis, sollicitudin faucibus ante. Nam dignissim volutpat ipsum in semper. Sed quis felis quis dolor venenatis ultricies. Donec placerat augue quis justo efficitur sollicitudin. Maecenas luctus nibh auctor mauris ultrices maximus.',
-      reviews: '1000',
-      stars: 4,
-      img: "images/air.jpg",
-      class: 'air'
-    },
-    {
-      title: 'The Name of the Wind',
-      author: 'Patrick Rothfuss',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse augue tellus, semper sed nisi quis, sollicitudin faucibus ante. Nam dignissim volutpat ipsum in semper. Sed quis felis quis dolor venenatis ultricies. Donec placerat augue quis justo efficitur sollicitudin. Maecenas luctus nibh auctor mauris ultrices maximus.',
-      reviews: '1000',
-      stars: 4,
-      img: "images/wind.jpg",
-      class: 'wind'
-    }
-  ],
+  featuredHeros: [],
   featuredBeers: [],
   featuredSpirits: [],
   user: {
@@ -41,8 +13,8 @@ const initialState = {
       author: 'George R.R. Martin',
       reviews: '422',
       stars: 5,
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.consectetur adipiscing elit, sed do eiusmod tempor.',
-      img: 'images/got-cover.jpg',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.consectetur adipiscing elit, sed do eiusmod tempor.',
+      image: 'images/got-cover.jpg',
       pairings: [
         {
           brewery: 'Harpoon',
@@ -93,8 +65,8 @@ const initialState = {
       author: 'Khaled Hosseini',
       reviews: '765',
       stars: 3,
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.consectetur adipiscing elit, sed do eiusmod tempor.',
-      img: 'images/the-kite-runner.jpg',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.consectetur adipiscing elit, sed do eiusmod tempor.',
+      image: 'images/the-kite-runner.jpg',
       pairings: [
         {
           brewery: 'Harpoon',
@@ -145,8 +117,8 @@ const initialState = {
       author: 'Kate Anderson Bower',
       reviews: '138',
       stars: 5,
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.consectetur adipiscing elit, sed do eiusmod tempor.',
-      img: 'images/first-women-cover.jpg',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.consectetur adipiscing elit, sed do eiusmod tempor.',
+      image: 'images/first-women-cover.jpg',
       pairings: [
         {
           brewery: 'Harpoon',
@@ -197,8 +169,8 @@ const initialState = {
       author: 'Ron Chernow',
       reviews: '46',
       stars: 4,
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.consectetur adipiscing elit, sed do eiusmod tempor.',
-      img: 'images/grant-cover.jpg',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.consectetur adipiscing elit, sed do eiusmod tempor.',
+      image: 'images/grant-cover.jpg',
       pairings: [
         {
           brewery: 'Harpoon',
@@ -266,6 +238,9 @@ const reducerRoutes = {
   }),
   [setHeros]: (state, action) => ({
     ...state, featuredHeros: action.payload
+  }),
+  [setBooks]: (state, action) => ({
+    ...state, books: action.payload
   }),
   default: (state, action) => state
 }
