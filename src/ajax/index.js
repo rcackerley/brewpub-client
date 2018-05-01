@@ -59,3 +59,13 @@ export let getHeroCards = () =>
 export let getPairingCards = () =>
   fetch('/pairings')
   .then(res => res.json())
+
+export let getAdditionalBeers = (type) =>
+    fetch('/similar-beers', {
+      method: 'POST',
+      body: JSON.stringify({type: type}),
+      headers: {
+        'content-type': 'application/json'
+      }
+    })
+    .then(res => res.json())

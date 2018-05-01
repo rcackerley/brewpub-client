@@ -1,12 +1,12 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import Navbar from './components/navigation/Navbar';
 import MainMenu from './components/menu/MainMenu';
 
 let MenuScreen = () =>
-  <div>
+  <Fragment>
     <Navbar />
     <MainMenu />
-  </div>
+  </Fragment>
 
 
 export default MenuScreen;

@@ -11,7 +11,7 @@ class Cards extends React.Component {
   componentDidMount() {
     let {setBooks} = this.props;
     getPairingCards()
-    // .then(pairings => setBooks(pairings))
+    .then(pairings => setBooks(pairings))
   }
   render() {
     let {books} = this.props;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import App from './App';
 import MenuScreen from './MenuScreen';
 import ShelfScreen from './ShelfScreen';
@@ -20,12 +20,12 @@ class RouterComp extends React.Component {
   render() {
     return (
       <Router>
-        <div>
+        <Fragment>
           <Route exact path="/" component={App} />
           <Route exact path="/menu" component={MenuScreen} />
           <Route exact path="/create-account" component={CreateAccountScreen} />
           <Route exact path="/shelf" component={ShelfScreen} />
-        </div>
+        </Fragment>
       </Router>
     )
   }
