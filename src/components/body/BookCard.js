@@ -18,7 +18,6 @@ class BookCard extends React.Component {
       book.pairings = beers;
       console.log(book)
       return setPairings(book)})
-
   }
 
   render() {

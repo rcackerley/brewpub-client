@@ -69,3 +69,13 @@ export let getAdditionalBeers = (type) =>
       }
     })
     .then(res => res.json())
+
+export let getAdditionalPairingsByGenre = (genre) =>
+  fetch('/genres', {
+    method: 'POST',
+    body: JSON.stringify({genre: genre}),
+    headers: {
+      'content-type': 'application/json'
+    }
+  })
+  .then(res => res.json())

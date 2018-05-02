@@ -250,6 +250,12 @@ footer {
   display: flex;
   margin-top: 0;
   margin-right: 50px;
+  text-transform: lowercase;
+  cursor: pointer
+}
+
+.main-well .filters li:hover {
+  font-weight: 700
 }
 
 .main-well .filters li {
