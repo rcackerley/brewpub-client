@@ -4,7 +4,7 @@ import EmailForm from './EmailForm';
 let Footer = () =>
   <footer>
     <h3 className="newsletter-header">Sign Up for the Weekly Barrel</h3>
-    <div>
+    <div className="barrel-container">
       <img className="barrel" src="images/barrel-icon.png" />
       <img className="barrel" src="images/barrel-icon.png" />
       <img className="barrel" src="images/barrel-icon.png" />
