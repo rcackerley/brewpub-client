@@ -4,8 +4,8 @@ import MainRail from './MainRail';
 
 let MainContentWell = () =>
   <div className="body">
-    <LeftRail />
     <MainRail />
+    <LeftRail />
   </div>
 
 

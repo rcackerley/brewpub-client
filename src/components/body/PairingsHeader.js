@@ -1,12 +1,16 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {getAdditionalPairingsByGenre} from '../../ajax/index';
+import {getAdditionalPairingsByGenre, getPairingCards} from '../../ajax/index';
 import {setBooks} from '../../actions/index';
 
 let PairingsHeader = ({setBooks}) =>
   <div className="pairings-header">
     <h3>Browse Pairings by Genre</h3>
     <ul className="filters">
+      <li onClick={event =>
+        getPairingCards()
+        .then(books => setBooks(books))
+      }>all</li>
       <li onClick={event =>
         getAdditionalPairingsByGenre(event.target.textContent)
         .then(books => setBooks(books))

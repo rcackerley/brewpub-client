@@ -7,11 +7,10 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import {connect} from 'react-redux';
 import {setToken} from './actions/index';
 import {getTokenFromLocalStorage} from './lib/index';
+import Modal from './components/heros/Modal';
 
 class RouterComp extends React.Component {
-  constructor(props) {
-    super(props)
-  }
+
   componentDidMount() {
     let {setToken} = this.props;
     let token = getTokenFromLocalStorage();
@@ -25,6 +24,7 @@ class RouterComp extends React.Component {
           <Route exact path="/menu" component={MenuScreen} />
           <Route exact path="/create-account" component={CreateAccountScreen} />
           <Route exact path="/shelf" component={ShelfScreen} />
+          <Route exact path="/pairing" component={Modal} />
         </Fragment>
       </Router>
     )

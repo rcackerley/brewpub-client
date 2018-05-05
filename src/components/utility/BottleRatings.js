@@ -11,12 +11,13 @@ let BottleRatings = ({reviews, stars, white, orange}) => {
   for (let i = 0; i < 5 - Math.round(stars / reviews); i++) {
     emptyBottleIcons.push('star');
   }
+
   return (
     <div className="reviews">
-      {filledBottleIcons.map(bottle => <FilledBottle white={white} orange={orange}/>)}
-      {emptyBottleIcons.map(bottle => <EmptyBottle white={white} orange={orange}/>)}
+      {filledBottleIcons.map((bottle, i) => <FilledBottle key={"filledBottle" + i} white={white} orange={orange}/>)}
+      {emptyBottleIcons.map((bottle, i) => <EmptyBottle key={"emptyBottle" + i} white={white} orange={orange}/>)}
       <span>{reviews} reviews</span>
-  </div>
+      </div>
 )
 }
 

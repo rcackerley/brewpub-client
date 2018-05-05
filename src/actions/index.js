@@ -46,6 +46,16 @@ export const setPairings = beers =>
     payload: beers
   })
 
+export const setShelf = books =>
+  ({
+    type: setShelf.toString(),
+    payload: books
+  })
+
+export const toggleModal = () =>
+  ({
+    type: toggleModal.toString()
+  })
 
 setBeersOfTheWeek.toString = () => 'SET_BEERS_OF_THE_WEEK';
 setSpiritsOfTheWeek.toString = () => 'SET_SPIRITS_OF_THE_WEEK';
@@ -55,3 +65,5 @@ setUser.toString = () => 'SET_USER';
 setHeros.toString = () => 'SET_HEROS';
 setBooks.toString = () => 'SET_BOOKS';
 setPairings.toString = () => 'SET_PAIRINGS';
+setShelf.toString = () => 'SET_SHELF';
+toggleModal.toString = () => 'TOGGLE_MODAL';

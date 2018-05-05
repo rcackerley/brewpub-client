@@ -5,9 +5,6 @@ import {getBeersOfTheWeek} from '../../ajax/index';
 import {setBeersOfTheWeek} from '../../actions/index';
 
 class WeeklyBrews extends React.Component {
-  constructor(props) {
-    super(props)
-  }
 
   componentDidMount() {
     let {setBeersOfTheWeek} = this.props
@@ -21,7 +18,7 @@ class WeeklyBrews extends React.Component {
       <div className="weekly-recs">
         <h3>Brews of the Week</h3>
         <ul>
-          {featuredBeers.map(beer => <SingleBrewRec beer={beer} />)}
+          {featuredBeers.map((beer, i) => <SingleBrewRec key={"beer" + i} beer={beer} />)}
         </ul>
       </div>
     )

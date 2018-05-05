@@ -47,7 +47,7 @@ class HeroSlider extends React.Component {
     return (
       <div className=" heros">
         <Slider {...settings}>
-          {cards.map(card => <HeroCard card={card} />)}
+          {cards.map((card, i) => <HeroCard key={"card" + i} card={card} />)}
         </Slider>
       </div>
     )

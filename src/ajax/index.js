@@ -79,3 +79,24 @@ export let getAdditionalPairingsByGenre = (genre) =>
     }
   })
   .then(res => res.json())
+
+export let ratePairing = (rating, token) =>
+  fetch('/ratings', {
+    method: 'POST',
+    body: JSON.stringify(rating),
+    headers: {
+      'content-type': 'application/json',
+      authorization: token
+    }
+  })
+  .then(res => res.json())
+
+export let getShelf = (token) =>
+  fetch('/my-shelf', {
+    method: 'GET',
+    headers: {
+      'content-type': 'application/json',
+      authorization: token
+    }
+  })
+  .then(res => res.json())

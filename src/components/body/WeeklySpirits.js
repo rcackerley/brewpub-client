@@ -5,9 +5,6 @@ import {getSpiritsOfTheWeek} from '../../ajax/index';
 import {setSpiritsOfTheWeek} from '../../actions/index';
 
 class WeeklySpirits extends React.Component {
-  constructor(props) {
-    super(props)
-  }
   componentDidMount() {
     let {setSpiritsOfTheWeek} = this.props
     getSpiritsOfTheWeek()
@@ -19,7 +16,7 @@ class WeeklySpirits extends React.Component {
       <div className="weekly-recs">
         <h3>Spirits of the Week</h3>
         <ul>
-          {featuredSpirits.map(spirit => <SingleSpiritRec spirit={spirit} />)}
+          {featuredSpirits.map((spirit, i) => <SingleSpiritRec key={"spirits" + i} spirit={spirit} />)}
         </ul>
       </div>
 
