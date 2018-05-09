@@ -100,3 +100,14 @@ export let getShelf = (token) =>
     }
   })
   .then(res => res.json())
+
+
+export let getPairing = (id) =>
+  fetch('/featured-pairing', {
+    method: 'GET',
+    headers: {
+      'content-type': 'application/json',
+      id: id
+    }
+  })
+  .then(res => res.json())

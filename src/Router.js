@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import {connect} from 'react-redux';
 import {setToken} from './actions/index';
 import {getTokenFromLocalStorage} from './lib/index';
-import Modal from './components/heros/Modal';
+import FeaturedPairingScreen from './components/heros/FeaturedPairingScreen';
 
 class RouterComp extends React.Component {
 
@@ -24,7 +24,7 @@ class RouterComp extends React.Component {
           <Route exact path="/menu" component={MenuScreen} />
           <Route exact path="/create-account" component={CreateAccountScreen} />
           <Route exact path="/shelf" component={ShelfScreen} />
-          <Route exact path="/pairing" component={Modal} />
+          <Route path="/pairing:id" component={FeaturedPairingScreen} />
         </Fragment>
       </Router>
     )

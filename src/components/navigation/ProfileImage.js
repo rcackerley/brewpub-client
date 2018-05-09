@@ -5,7 +5,7 @@ import {getProfileThumbnailImage} from '../../ajax/index';
 import {setUserImage} from '../../actions/index';
 
 class ProfileImage extends React.Component {
-  
+
   componentDidMount() {
     let {token, setUserImage} = this.props;
     token &&
@@ -17,7 +17,7 @@ class ProfileImage extends React.Component {
     let {user} = this.props;
     return (
       <Link to="/menu">
-          <img alt="profile" className="prof-thumbnail" src={user.image} />
+          <img alt="profile" className="prof-thumbnail" src={'/' + user.image} />
       </Link>
     )
   }

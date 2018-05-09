@@ -6,7 +6,7 @@ let Navlinks = () =>
   <div className="nav-right">
     {/*<Link to="#"><img alt="search icon" className="icons" src="images/search-icon.png" /></Link>*/}
     <ProfileImage />
-    <Link to="/shelf"><img alt="menu icon" className="icons" src="images/menu-icon.png" /></Link>
+    <Link to="/shelf"><img alt="menu icon" className="icons" src="/images/menu-icon.png" /></Link>
   </div>
 
 export default Navlinks;

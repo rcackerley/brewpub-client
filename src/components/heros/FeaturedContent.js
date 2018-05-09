@@ -1,8 +1,7 @@
 import React from 'react';
 import BottleRatings from '../utility/Ratings';
 import {connect} from 'react-redux';
-import Modal from './Modal';
-import {toggleModal} from '../../actions/index';
+import {Link} from 'react-router-dom';
 
 let FeaturedContent = ({card, toggleModal}) =>
   <div className="featured-content">
@@ -10,13 +9,10 @@ let FeaturedContent = ({card, toggleModal}) =>
     <h5>by {card.author}</h5>
       <BottleRatings id={card["pairings.id"]} reviews={card.reviews} stars={card.stars} white={'white'}/>
     <p className="summary">{card.description}</p>
-    {//<input onClick={event => toggleModal()} type="checkbox" id="modal" />
-    //<label for="modal" className={"book-color-" + card.class}>View Pairing</label>
-    //<Modal />
-    }
+    <Link to={{pathname: `/pairings/${card["pairings.id"]}`}}><button className={"book-color-" + card.class}>View Pairing</button></Link>
+
   </div>
 
 let mapStateToProps = state => state;
-let mapDispatchToProps = dispatch => ({toggleModal: () => dispatch(toggleModal())})
-let FeaturedContentContainer = connect(mapStateToProps, mapDispatchToProps)(FeaturedContent)
+let FeaturedContentContainer = connect(mapStateToProps)(FeaturedContent)
 export default FeaturedContentContainer;
