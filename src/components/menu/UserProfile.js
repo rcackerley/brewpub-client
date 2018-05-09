@@ -17,7 +17,12 @@ class UserProfile extends React.Component {
     return (
       <div className="vertical-flex">
         <h2>My Account</h2>
-        <img alt="user profile" className="menu-prof-image" src={user.image}/>
+        <div className="avatar">
+          <img alt="user profile" className="menu-prof-image" src={user.image}/>
+          <div className="avatar-edit">
+            <img className="edit-icon" src="/images/edit-icon.png" />
+          </div>
+        </div>
         <h3>{user.name}</h3>
         <p>email: {user.email}<br />
            password: ***********
