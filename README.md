@@ -3,7 +3,7 @@
 > Brewpub is an application where users can see curated pairings of beer and books. Users can rate pairings and seee featured pairings.
 <br>
 
-![brewpub](https://user-images.githubusercontent.com/19500679/39670024-25e3a836-50c9-11e8-943c-3f9887be8bda.png)
+![brewpub](https://user-images.githubusercontent.com/20142674/39817286-ba82f696-536b-11e8-9680-121e42184723.png)
 ---
 
 ## Table of Contents
