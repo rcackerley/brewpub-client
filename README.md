@@ -11,8 +11,6 @@
 - [Features](#features)
 - [Libraries/APIs](#external)
 - [Todos](#todos)
-- [Contributors](#contributors)
-- [License](#license)
 
 ---
 
