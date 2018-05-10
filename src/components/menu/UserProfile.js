@@ -4,6 +4,10 @@ import {setUser} from '../../actions/index';
 import {getUserProfile} from '../../ajax/index';
 
 class UserProfile extends React.Component {
+  constructor(props) {
+    super(props);
+    
+  }
 
   componentDidMount() {
     let {token, setUser} = this.props;
@@ -13,6 +17,7 @@ class UserProfile extends React.Component {
   }
 
   render() {
+
     let {user} = this.props;
     return (
       <div className="vertical-flex">
@@ -22,6 +27,7 @@ class UserProfile extends React.Component {
           <div className="avatar-edit">
             <img className="edit-icon" src="/images/edit-icon.png" />
           </div>
+
         </div>
         <h3>{user.name}</h3>
         <p>email: {user.email}<br />
