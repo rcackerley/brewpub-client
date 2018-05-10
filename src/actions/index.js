@@ -57,6 +57,12 @@ export const toggleModal = () =>
     type: toggleModal.toString()
   })
 
+export const setVisibleBooks = books =>
+  ({
+    type: setVisibleBooks.toString(),
+    payload: books
+  })
+
 setBeersOfTheWeek.toString = () => 'SET_BEERS_OF_THE_WEEK';
 setSpiritsOfTheWeek.toString = () => 'SET_SPIRITS_OF_THE_WEEK';
 setToken.toString = () => 'SET_TOKEN';
@@ -67,3 +73,4 @@ setBooks.toString = () => 'SET_BOOKS';
 setPairings.toString = () => 'SET_PAIRINGS';
 setShelf.toString = () => 'SET_SHELF';
 toggleModal.toString = () => 'TOGGLE_MODAL';
+setVisibleBooks.toString = () => 'SET_VISIBLE_BOOKS';

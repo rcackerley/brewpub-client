@@ -1,4 +1,5 @@
-import {setBeersOfTheWeek, setSpiritsOfTheWeek, setToken, setUserImage, setUser, setHeros, setBooks, setPairings, setShelf, toggleModal} from '../actions/index';
+import {setBeersOfTheWeek, setSpiritsOfTheWeek, setToken, setUserImage, setUser,
+  setHeros, setBooks, setPairings, setShelf, toggleModal, setVisibleBooks} from '../actions/index';
 
 const initialState = {
   featuredHeros: [],
@@ -10,7 +11,8 @@ const initialState = {
   books: [],
   token: null,
   shelf: [],
-  modalInvisible: true
+  modalInvisible: true,
+  visibleBooks: []
 }
 
 const reducerRoutes = {
@@ -43,6 +45,9 @@ const reducerRoutes = {
   }),
   [toggleModal]: (state) => ({
     ...state, modalInvisible: !state.modalInvisible
+  }),
+  [setVisibleBooks]: (state, action) => ({
+    ...state, visibleBooks: action.payload
   }),
   default: (state, action) => state
 }
