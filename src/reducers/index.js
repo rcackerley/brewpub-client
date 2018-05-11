@@ -6,7 +6,8 @@ const initialState = {
   featuredBeers: [],
   featuredSpirits: [],
   user: {
-    image: 'images/placeholder.png'
+    image: 'images/placeholder.png',
+    name: null
   },
   books: [],
   token: null,

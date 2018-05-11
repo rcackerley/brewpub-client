@@ -8,6 +8,7 @@ import {connect} from 'react-redux';
 import {setToken} from './actions/index';
 import {getTokenFromLocalStorage} from './lib/index';
 import FeaturedPairingScreen from './components/heros/FeaturedPairingScreen';
+import LoginScreen from './LoginScreen';
 
 class RouterComp extends React.Component {
 
@@ -22,6 +23,7 @@ class RouterComp extends React.Component {
         <Fragment>
           <Route exact path="/" component={App} />
           <Route exact path="/menu" component={MenuScreen} />
+          <Route exact path="/login" component={LoginScreen} />
           <Route exact path="/create-account" component={CreateAccountScreen} />
           <Route exact path="/shelf" component={ShelfScreen} />
           <Route path="/pairing:id" component={FeaturedPairingScreen} />

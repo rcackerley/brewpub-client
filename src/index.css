@@ -832,3 +832,13 @@ footer button {
   width: 25px;
   align-self:center;
 }
+
+.uploader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 77px;
+  height: 77px;
+  overflow: hidden;
+  opacity:0;
+}

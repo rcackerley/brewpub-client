@@ -30,7 +30,7 @@ export let signIn = (user) =>
       'content-type': 'application/json'
     }
   })
-  .then(res => res.json())
+  .then(res => res.status >= 400 ? Promise.reject('failed') : res.json())
 
 export let getProfileThumbnailImage = (token) =>
   fetch('/profile', {
@@ -40,7 +40,7 @@ export let getProfileThumbnailImage = (token) =>
       'content-type': 'application/json'
     }
   })
-  .then(res => res.json())
+  .then(res => res.status >= 400 ? Promise.reject('failed') : res.json())
 
 export let getUserProfile = (token) =>
   fetch('/my-profile', {
@@ -50,7 +50,7 @@ export let getUserProfile = (token) =>
       'content-type': 'application/json'
     }
   })
-  .then(res => res.json())
+  .then(res => res.status >= 400 ? Promise.reject('failed') : res.json())
 
 export let getHeroCards = () =>
   fetch('/heros')
@@ -108,6 +108,16 @@ export let getPairing = (id) =>
     headers: {
       'content-type': 'application/json',
       id: id
+    }
+  })
+  .then(res => res.json())
+
+export let uploadImage = (data, token) =>
+  fetch('/upload', {
+    method: 'POST',
+    body: data,
+    headers: {
+      authorization: token.token,
     }
   })
   .then(res => res.json())

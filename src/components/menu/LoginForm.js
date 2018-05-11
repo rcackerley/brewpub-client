@@ -14,6 +14,7 @@ let LoginForm = ({handlePassword, handleUserName, emailInput, passwordInput, set
       .then(token => {localStorage.setItem('token', JSON.stringify(token)); return token})
       .then(token => setToken(token))
       .then(res => history.push('/'))
+      .catch(err => console.log(err))
     }
     }>login</button>
     <p className="message">Not registered? <Link to="/create-account">Create an account</Link></p>

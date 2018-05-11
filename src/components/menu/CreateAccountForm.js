@@ -16,9 +16,10 @@ let CreateAccountForm = ({handleEmail, handlePassword, handleUserName, emailInpu
         .then(token => {localStorage.setItem('token', JSON.stringify(token)); return token})
         .then(token => setToken(token))
         .then(res => history.push('/'))
+        .catch(err => console.log(err))
       }
     }>create account</button>
-    <p className="message">Already registered? <Link to="/menu">Sign In</Link></p>
+    <p className="message">Already registered? <Link to="/login">Sign In</Link></p>
   </form>
 
 let mapStateToProps = state => state;
