@@ -44,7 +44,7 @@ export let getProfileThumbnailImage = (token) =>
 
 export let getUserProfile = (token) =>
   fetch('/my-profile', {
-    body: JSON.stringify(token),
+    body: JSON.stringify(token.token),
     method: 'POST',
     headers: {
       'content-type': 'application/json'

@@ -6,7 +6,7 @@ import {setToken} from '../../actions/index';
 
 let LoginForm = ({handlePassword, handleUserName, emailInput, passwordInput, setToken, history}) =>
   <form className="login-form">
-    <input onChange={(event) => handleUserName(event)} type="text" placeholder="email"/>
+    <input onChangeText={(text) => handleUserName(text)} type="text" placeholder="email"/>
     <input onChange={(event) => handlePassword(event)} type="password" placeholder="password"/>
     <button onClick={(event) => {
       event.preventDefault();

@@ -2,7 +2,7 @@ import React from 'react';
 import BookCard from './BookCard';
 import {connect} from 'react-redux';
 import {getPairingCards} from '../../ajax/index';
-import {setBooks, setVisibleBooks} from '../../actions/index'
+import {setBooks, setVisibleBooks} from '../../actions/index';
 
 class Cards extends React.Component {
 
