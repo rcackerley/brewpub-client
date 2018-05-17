@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {setUser} from '../../actions/index';
+import {setUser, clearToken} from '../../actions/index';
 import {getUserProfile, uploadImage} from '../../ajax/index';
 import {withRouter} from 'react-router-dom';
 
@@ -36,7 +36,7 @@ class UserProfile extends React.Component {
 
   render() {
 
-    let {user, token} = this.props;
+    let {user, token, clearToken} = this.props;
     console.log(user.image)
     return (
       <div className="vertical-flex">
@@ -55,12 +55,18 @@ class UserProfile extends React.Component {
         <p>email: {user.email}<br />
            password: ***********
         </p>
-
+        <button onClick={event => {
+          localStorage.clear();
+          clearToken();
+        }} className="logout-button">Logout</button>
       </div>
     )
   }
 }
-let mapDispatchToProps = dispatch => ({setUser: (user) => dispatch(setUser(user)) });
+let mapDispatchToProps = dispatch => ({
+  setUser: (user) => dispatch(setUser(user)),
+  clearToken: () => dispatch(clearToken())
+});
 let mapStateToProps = state => ({user: state.user, token: state.token})
 let UserProfileContainer = withRouter(connect(mapStateToProps, mapDispatchToProps)(UserProfile));
 export default UserProfileContainer;
