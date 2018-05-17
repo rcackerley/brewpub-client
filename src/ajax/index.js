@@ -121,3 +121,7 @@ export let uploadImage = (data, token) =>
     }
   })
   .then(res => res.json())
+
+export let getSearchTerms = () =>
+  fetch('/search')
+  .then(res => res.json())

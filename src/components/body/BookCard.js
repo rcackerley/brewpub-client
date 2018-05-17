@@ -22,7 +22,7 @@ class BookCard extends React.Component {
     return (
       <div className="book-card">
         <div className="book-info">
-          <BookCover img={book.image} />
+          <BookCover img={book.image} icon={book.icon} />
           <div className="book-content">
             <BookTitleAuthor title={book.title} author={book.author}/>
             <BottleRatings id={book["pairings.id"]} reviews={book.reviews} stars={book.stars} orange={'orange'}/>
