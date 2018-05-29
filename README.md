@@ -22,9 +22,9 @@ https://ancient-chamber-57403.herokuapp.com/
 
 ## Features
 
-* Custom predictive search bar to query for recipes
-* Add recipe to database
-* Search for recipes based on category
+* Custom predictive search bar to query for beers or books
+* Rate beers and book pairings
+* View previously rated pairings
 * Authentication using JSON web tokens and bcrypt
 * Client-side routing with react router
 * State management with redux
@@ -51,9 +51,3 @@ https://ancient-chamber-57403.herokuapp.com/
 * UI Animations
 
 ---
-
-## License
-
-[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
-
-- **[MIT license](https://github.com/jamesnmcdowell/griddle/blob/master/LICENSE)**
