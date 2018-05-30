@@ -32,9 +32,11 @@ class SearchBar extends React.Component {
       if (term.icon === "beers") {
         let foundBeer = books.filter(book => term.name === book.name);
         setVisibleBooks(foundBeer);
+        this.setState({searchString: ''});
       } else {
         let foundBook = books.filter(book => term.name === book.title);
         setVisibleBooks(foundBook);
+        this.setState({searchString: ''});
       }
     }
 
