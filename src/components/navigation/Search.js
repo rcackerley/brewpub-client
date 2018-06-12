@@ -3,6 +3,7 @@ import {getSearchTerms} from '../../ajax/index';
 import Ionicon from 'react-ionicons';
 import {connect} from 'react-redux';
 import {setVisibleBooks} from '../../actions/index';
+import {withRouter} from 'react-router-dom';
 
 class SearchBar extends React.Component {
 
@@ -23,7 +24,7 @@ class SearchBar extends React.Component {
   }
 
   render() {
-    let {books, setVisibleBooks} = this.props;
+    let {books, setVisibleBooks, match, history} = this.props;
     let handleChange = (event) => {
         this.setState({searchString: event.target.value});
       }
@@ -52,7 +53,10 @@ class SearchBar extends React.Component {
         </form>
         { searchString.length >= 1 &&
         <ul className="suggestions">
-          {searchTerms.map((term, i) => <li onClick={event => filterSearch(term)} key={"terms-"+ i}>{term.name} <Ionicon icon={term.icon === "beers" ? "ios-beer" : "ios-book"} fontSize="15px" color="#e28730" /></li>)}
+          {searchTerms.map((term, i) => <li onClick={event => {
+            filterSearch(term);
+            match.url !== "/" && history.push("/");
+          }} key={"terms-"+ i}>{term.name} <Ionicon icon={term.icon === "beers" ? "ios-beer" : "ios-book"} fontSize="15px" color="#e28730" /></li>)}
         </ul>
         }
       </Fragment>
@@ -62,4 +66,4 @@ class SearchBar extends React.Component {
 
 let mapDispatchToProps = dispatch => ({setVisibleBooks: (books) => dispatch(setVisibleBooks(books)) });
 let mapStateToProps = state => ({books: state.books})
-export default connect(mapStateToProps, mapDispatchToProps)(SearchBar);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SearchBar));
